@@ -14,7 +14,7 @@ task :run do
     raise 'Nepieciešams norādīt failu ar .sudoku faila tipu' unless File.extname(filename) == '.sudoku'
 
     sudoku_string = File.read(filename)
-    print Validator.validate(sudoku_string)
+    print Validator.validator(sudoku_string)
   rescue TypeError => _e
     raise 'Nepieciešams norādīt faila nosaukumu'
   rescue Errno::ENOENT => _e
